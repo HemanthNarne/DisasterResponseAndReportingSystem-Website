@@ -1,6 +1,6 @@
 import { Applicant } from './applicant';
 
-export const applicants: Applicant[] = [
+export const applicant: Applicant[] = [
     {
         firstName: 'firstName1',
         lastName: 'lastName1',
@@ -54,7 +54,7 @@ export const applicants: Applicant[] = [
         lisence: 'lisence3',
         certification:'certification3',
         fileUpload:'pdf3',
-        limitations:'deaff'
+        limitations:'asthama'
       },
       {
         firstName: 'firstName4',
@@ -74,4 +74,4 @@ export const applicants: Applicant[] = [
         fileUpload:'pdf4',
         limitations:'night blindness'
       },
-]
+];
