@@ -9,7 +9,7 @@
       <label for="email">
         <b>Email</b>
       </label>
-      <input type="text" class="form-control" [ngModel]="applicant.email" name="email" #email="ngModel" id="inputEmail" placeholder="Email"
+      <input type="text" class="form-control" [ngModel]="applicant.email" name="email" email #email="ngModel" id="inputEmail" placeholder="Email"
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
       <!-- Email error block -->
       <div *ngIf="(email.invalid && ( email.touched || email.dirty)) || isSubmitted" class="col-sm-6 text-danger">

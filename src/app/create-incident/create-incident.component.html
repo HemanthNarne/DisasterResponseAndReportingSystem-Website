@@ -1,6 +1,75 @@
 <!-- 
   Assigned to Hemanth
  -->
-<p>
-  create-incident works!
-</p>
+ <div class="createContainer">
+<h2>Create Incident</h2>
+
+<form novalidate (ngSubmit)="onCreate(createInc)" #createInc="ngForm">
+
+  <div class="form-group">
+    <label for="incident">
+      <b>Incident Name</b>
+    </label>
+    <input type="text" class="form-control" [ngModel]="applicant.incident" name="incident" incident #incident="ngModel" id="inputincident"
+      placeholder="Enter incident" required>
+    <!-- incident error block -->
+    <div *ngIf="(incident.invalid && ( incident.touched || incident.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+      <div *ngIf="incident.errors?.required">
+        Please enter the incident
+      </div>
+    </div>
+
+    <label for="location">
+      <b>Location</b>
+    </label>
+    <input type="text" class="form-control" [ngModel]="applicant.location" name="location" location #location="ngModel" id="inputlocation"
+      placeholder="Enter location" required>
+    <!-- location error block -->
+    <div *ngIf="(location.invalid && ( location.touched || location.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+      <div *ngIf="location.errors?.required">
+        Please enter the location
+      </div>
+    </div>
+
+    <!-- Select certTeam block -->
+    <label for="certTeam">
+      <b>CERT Team</b>
+    </label>
+    <select id="certTeam" class="form-control" [ngModel]="user.certTeam" name="certTeam" required>
+      <option value="Team 01">Team 01</option>
+      <option value="Team 02">Team 02</option>
+      <option value="Team 03">Team 03</option>
+      <option value="Team 04">Team 04</option>
+      <option value="Team 05">Team 05</option>
+    </select>
+
+    <!-- Select date block -->
+    <label for="date">
+      <b>Date</b>
+    </label>
+    <input type="date" class="form-control" [ngModel]="user.date" name="date" #date="ngModel" id="inputdate" placeholder="Select date"
+      required>
+    <!-- date error block -->
+    <div *ngIf="(date.invalid && ( date.touched || date.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+      <div *ngIf="date.errors?.required">
+        Please enter the date
+      </div>
+    </div>
+
+    <!-- Select date block -->
+    <label for="time">
+      <b>Time</b>
+    </label>
+    <input type="time" class="form-control" [ngModel]="user.time" name="time" #time="ngModel" id="inputtime" placeholder="Select time"
+      required>
+    <!-- time error block -->
+    <div *ngIf="(time.invalid && ( time.touched || time.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+      <div *ngIf="time.errors?.required">
+        Please enter the time
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary"> Login </button>
+</form>
+</div>
