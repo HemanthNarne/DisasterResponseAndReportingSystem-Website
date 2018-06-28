@@ -1,6 +1,43 @@
 <!-- 
   Assigned to Hemanth
  -->
-<p>
-  login works!
-</p>
+ <div class="loginContainer">
+  <h1>Login </h1>
+  <form novalidate (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+
+    <div class="form-group">
+      <label for="email">
+        <b>Email</b>
+      </label>
+      <input type="text" class="form-control" [ngModel]="applicant.email" name="email" #email="ngModel" id="inputEmail" placeholder="Email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+      <!-- Email error block -->
+      <div *ngIf="(email.invalid && ( email.touched || email.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+        <div *ngIf="email.errors?.required">
+          Please enter the email id
+        </div>
+        <div *ngIf="email.errors?.pattern &&  email.dirty">
+            Please enter the valid email id
+        </div>
+      </div>
+
+      <!-- Password block -->
+      <label for="password">
+        <b>Password</b>
+      </label>
+      <input type="password" class="form-control" [ngModel]="applicant.password" name="password" #password="ngModel" id="inputpassword"
+        placeholder="Password" minlength="6" required>
+      <!-- password error block -->
+      <div *ngIf="(password.invalid && ( password.touched || password.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+        <div *ngIf="password.errors?.required">
+          Please enter the password
+        </div>
+        <div *ngIf="password.errors?.minlength && password.dirty">
+          Password must have mininmum 6 characters.
+        </div>
+      </div>
+      </div>
+
+      <button class="btn btn-primary"> Login </button>
+  </form>
+  </div>
