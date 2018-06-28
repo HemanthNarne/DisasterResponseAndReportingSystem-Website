@@ -11,6 +11,7 @@ import { CreateIncidentComponent } from './create-incident/create-incident.compo
 import { ReviewApplicationComponent } from './review-application/review-application.component';
 import { TeamsComponent } from './teams/teams.component';
 import { CreateTeamsComponent } from './create-teams/create-teams.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CreateTeamsComponent } from './create-teams/create-teams.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
