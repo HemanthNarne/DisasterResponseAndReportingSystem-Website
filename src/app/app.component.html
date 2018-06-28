@@ -1,3 +1,25 @@
-<div class="container">
-<router-outlet></router-outlet>
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">DRM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/reviewApplication">Review Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/teams">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="">Logout</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <router-outlet></router-outlet>
 </div>

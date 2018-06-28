@@ -12,6 +12,8 @@ import { ReviewApplicationComponent } from './review-application/review-applicat
 import { TeamsComponent } from './teams/teams.component';
 import { CreateTeamsComponent } from './create-teams/create-teams.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { Team1DetailsComponent } from './team1-details/team1-details.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,16 @@ import {MatCardModule} from '@angular/material/card';
     CreateIncidentComponent,
     ReviewApplicationComponent,
     TeamsComponent,
-    CreateTeamsComponent
+    CreateTeamsComponent,
+    Team1DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

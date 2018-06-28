@@ -1,0 +1,21 @@
+<h1>Team1 Members</h1><br>
+<table class="userTable table-bordered">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Date of Birth</th>
+    <th>City</th>
+    <th>Phone Number</th>
+    <th>Skills</th>
+  </tr>
+  <tr *ngFor="let applicant of applicants">
+    <td> {{ applicant.firstName }} </td>
+    <td> {{ applicant.lastName }} </td>
+    <td> {{ applicant.email }} </td>
+    <td> {{ applicant.dob | date:'MM-dd-yyyy'}} </td>
+    <td> {{ applicant.city }} </td>
+    <td> {{ applicant.phone }} </td>
+    <td> {{ applicant.skills }} </td>
+  </tr>
+</table>
