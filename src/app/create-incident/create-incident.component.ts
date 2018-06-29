@@ -14,7 +14,7 @@ export class CreateIncidentComponent implements OnInit {
   }
 
   onCreate(createInc){
-    alert("Module Created Successfully");
+    alert("Incident module created successfully");
     this.router.navigate(['/dashboard']);
     
   }

@@ -57,6 +57,24 @@ export const applicant: Applicant[] = [
         limitations:'none'
       },
       {
+        firstName: 'Sreevani',
+        lastName: 'Anoohya',
+        email: 'anoohya@gmail.com',
+        dob: '02/28/1234',
+        address1: 'Apt#63',
+        address2: 'Horizon West Apts',
+        country: 'United states',
+        state: 'Missouri',
+        city: 'Maryville',
+        county: 'county4',
+        phone: '1233451234',
+        skills: 'light search',
+        lisence: '9876543210',
+        certification:'4564567809',
+        fileUpload:'pdf4',
+        limitations:'none'
+      },
+      {
         firstName: 'Vineeth',
         lastName: 'Agarwal',
         email: 'agarwal@gmail.com',
@@ -74,4 +92,5 @@ export const applicant: Applicant[] = [
         fileUpload:'pdf4',
         limitations:'none'
       },
+      
 ];
