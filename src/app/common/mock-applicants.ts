@@ -1,3 +1,5 @@
+// Assined to Sreevani
+
 import { Applicant } from './applicant';
 
 export const applicant: Applicant[] = [

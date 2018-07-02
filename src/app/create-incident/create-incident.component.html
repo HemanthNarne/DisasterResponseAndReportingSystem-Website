@@ -12,7 +12,10 @@
     </label>
     <input type="text" class="form-control" [ngModel]="applicant.incident" name="incident" incident #incident="ngModel" id="inputincident"
       placeholder="Enter incident" required>
-    <!-- incident error block -->
+    <!-- 
+      incident error block 
+      by Kishan
+    -->
     <div *ngIf="(incident.invalid && ( incident.touched || incident.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="incident.errors?.required">
         Please enter the incident
@@ -24,7 +27,10 @@
     </label>
     <input type="text" class="form-control" [ngModel]="applicant.location" name="location" location #location="ngModel" id="inputlocation"
       placeholder="Enter location" required>
-    <!-- location error block -->
+    <!-- 
+      location error block 
+      by Kishan
+    -->
     <div *ngIf="(location.invalid && ( location.touched || location.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="location.errors?.required">
         Please enter the location
@@ -49,7 +55,10 @@
     </label>
     <input type="date" class="form-control" [ngModel]="user.date" name="date" #date="ngModel" id="inputdate" placeholder="Select date"
       required>
-    <!-- date error block -->
+    <!-- 
+      date error block 
+      by Kishan
+    -->
     <div *ngIf="(date.invalid && ( date.touched || date.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="date.errors?.required">
         Please enter the date
@@ -62,7 +71,10 @@
     </label>
     <input type="time" class="form-control" [ngModel]="user.time" name="time" #time="ngModel" id="inputtime" placeholder="Select time"
       required>
-    <!-- time error block -->
+    <!-- 
+      time error block 
+      by Kishan
+    -->
     <div *ngIf="(time.invalid && ( time.touched || time.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="time.errors?.required">
         Please enter the time

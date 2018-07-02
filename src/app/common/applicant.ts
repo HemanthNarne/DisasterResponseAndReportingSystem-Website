@@ -1,3 +1,5 @@
+// Assigned to Kishan
+
 export class Applicant {
 
     firstName: string;
