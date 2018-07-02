@@ -11,7 +11,10 @@
       </label>
       <input type="text" class="form-control" [ngModel]="applicant.email" name="email" email #email="ngModel" id="inputEmail" placeholder="Email"
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-      <!-- Email error block -->
+      <!-- 
+        Email error block 
+        by kishan
+      -->
       <div *ngIf="(email.invalid && ( email.touched || email.dirty)) || isSubmitted" class="col-sm-6 text-danger">
         <div *ngIf="email.errors?.required">
           Please enter the email id
@@ -21,7 +24,10 @@
         </div>
       </div>
 
-      <!-- Password block -->
+      <!-- 
+        Password block 
+        by kishan
+      -->
       <label for="password">
         <b>Password</b>
       </label>
