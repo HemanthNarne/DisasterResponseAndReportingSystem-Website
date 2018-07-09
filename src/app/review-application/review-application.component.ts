@@ -2,7 +2,7 @@
 
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { applicant } from '../common/mock-applicants';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatPaginator, MatTableDataSource, MatSort} from '@angular/material';
 import { Applicant } from '../common/applicant';
 
 @Component({
@@ -16,6 +16,7 @@ export class ReviewApplicationComponent implements OnInit {
   
   dataSource = new MatTableDataSource<Applicant>(applicant);
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
    
   constructor() { }
@@ -26,6 +27,7 @@ export class ReviewApplicationComponent implements OnInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
 }
