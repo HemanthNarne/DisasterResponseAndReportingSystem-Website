@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-// import { Applicant } from '../common/applicant';
+// Assigned to Kishan
+
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { applicant } from '../common/mock-applicants';
+import {MatPaginator, MatTableDataSource} from '@angular/material';
+import { Applicant } from '../common/applicant';
 
 @Component({
   selector: 'app-review-application',
@@ -9,11 +12,20 @@ import { applicant } from '../common/mock-applicants';
 })
 export class ReviewApplicationComponent implements OnInit {
 
-  applicants = applicant;
+  displayedColumns = ['firstName', 'lastName', 'email', 'dob'];
+  
+  dataSource = new MatTableDataSource<Applicant>(applicant);
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+   
   constructor() { }
 
   ngOnInit() {
-    
+
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
   }
 
 }
