@@ -12,7 +12,7 @@ import { Applicant } from '../common/applicant';
 })
 export class ReviewApplicationComponent implements OnInit {
 
-  displayedColumns = ['firstName', 'lastName', 'email', 'dob'];
+  displayedColumns = ['firstName', 'lastName', 'email', 'dob', 'county', 'skills'];
   
   dataSource = new MatTableDataSource<Applicant>(applicant);
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -30,4 +30,9 @@ export class ReviewApplicationComponent implements OnInit {
     this.dataSource.sort = this.sort;
   }
 
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }
 }

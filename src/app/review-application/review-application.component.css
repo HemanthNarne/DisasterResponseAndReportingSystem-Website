@@ -5,8 +5,23 @@
     flex-direction: column;
     min-width: 300px;
   }
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
   
-  .mat-table {
-    overflow: auto;
-    max-height: 500px;
-  }
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.table-header{
+  font-size: 18px;
+  color: black;
+}
