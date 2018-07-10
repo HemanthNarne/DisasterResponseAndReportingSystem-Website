@@ -1,10 +1,11 @@
 // Assigned to Kishan
 
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { applicant } from '../common/mock-applicants';
+// import { applicant } from '../common/mock-applicants'; // for mock user
 import {MatPaginator, MatTableDataSource, MatSort} from '@angular/material';
 import { Applicant } from '../common/applicant';
 import { SelectionModel } from '@angular/cdk/collections';
+import { DataService } from '../common/dataService';
 
 @Component({
   selector: 'app-review-application',
@@ -13,21 +14,26 @@ import { SelectionModel } from '@angular/cdk/collections';
 })
 export class ReviewApplicationComponent implements OnInit {
 
-  displayedColumns = ['firstName', 'lastName', 'email', 'dob', 'county', 'skills'];
-  
-  dataSource = new MatTableDataSource<Applicant>(applicant);
+  applicants: Applicant[];
+  displayedColumns = ['firstName', 'lastName', 'email', 'county', 'skills'];
+  dataSource = new  MatTableDataSource<Applicant>(this.applicants)
   selection = new SelectionModel<Applicant>(true, []);
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-
+  @ViewChild(MatSort) sort: MatSort;  
   
-   
-  constructor() { }
+  
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getApplicantsList()
+      .subscribe((data) =>{
+        this.applicants = data['data'];
+        this.dataSource = new MatTableDataSource<Applicant>(this.applicants);
+      });
 
   }
 
+  
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -43,7 +49,8 @@ export class ReviewApplicationComponent implements OnInit {
     console.log(row);
     confirm("First Name: " + row.firstName +"\n"+
             "Last Name: " + row.lastName +"\n"+
-            "County: " + row.countys
+            "County: " + row.county +"\n"+
+            "Phone Number: " + row.skills
   );
   }
 }

@@ -2,22 +2,22 @@
 
 export class Applicant {
 
-    firstName: string;
+    firstName:  string;
     lastName: string;
-    email: string;
+    email:   string;
     dob: string;
+    mobileNumber: string;
     address1: string;
     address2: string;
-    country: string;
-    state: string;
-    city: string;
     county: string;
-    phone: string;
+    city: string;
+    state: string;
+    country: string;
     skills: string;
-    lisence: string;
-    certification: string;
-    fileUpload: string;
+    licenseNumber: string;
+    files: string;
     limitations: string;
+    pushNotification: string; 
 
     constructor(values: Object = {}) {
         /*Constructor initialization*/

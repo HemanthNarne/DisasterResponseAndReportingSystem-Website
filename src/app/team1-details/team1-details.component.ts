@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { applicant } from '../common/mock-applicants';
+// import { applicant } from '../common/mock-applicants';
 
 @Component({
   selector: 'app-team1-details',
@@ -8,7 +8,7 @@ import { applicant } from '../common/mock-applicants';
 })
 export class Team1DetailsComponent implements OnInit {
 
-  applicants = applicant;
+  // applicants = applicant;
   
   constructor() { }
 
