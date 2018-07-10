@@ -1,6 +1,33 @@
-<!-- 
-  Assigned to Hemanth
- -->
-<p>
-  create-teams works!
-</p>
+
+ <div class="createContainer">
+    <h2>Create Team</h2><br>
+    
+    <form novalidate (ngSubmit)="onCreate(createInc)" #createInc="ngForm">
+    
+      <div class="form-group">
+        <label for="team">
+          <b>Team Name</b>
+        </label>
+        <input type="text" class="form-control" [ngModel]="team.teamname" name="team name" teamname #teamname="ngModel" id="inputteamname"
+          placeholder="Enter Team Name" required>
+      
+        <div *ngIf="(incident.invalid && ( incident.touched || incident.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+          <div *ngIf="incident.errors?.required">
+            Please enter the incident
+          </div>
+        </div><br>
+    
+        <label for="teamid">
+          <b>Team ID</b>
+        </label>
+        <input type="text" class="form-control" [ngModel]="team.teamid" name="teamid" teamid #teamid="ngModel" id="teamid"
+          placeholder="Team ID" required><br>
+
+      </div>
+
+      
+    
+      <button class="btn btn-primary"> Create Team</button>
+    </form>
+    </div>
+    
