@@ -2,8 +2,8 @@
 
 .example-container {
     display: flex;
-    flex-direction: column;
-    min-width: 300px;
+    /* flex-direction: column;
+    min-width: 300px; */
   }
 
 .example-header {
