@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Incident } from '../common/incident';
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource, MatSort, MatDatepickerInputEvent } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 import { DataService } from '../common/dataService';
 
@@ -12,9 +12,12 @@ import { DataService } from '../common/dataService';
 export class ArchivedIncidentsComponent implements OnInit {
 
   incidents: Incident[];
+  events: string[] = []; // for date filter
   displayedColumns = ['incidentName', 'location', 'date', 'time', 'description'];
   dataSource: MatTableDataSource<Incident>
   selection = new SelectionModel<Incident>(true, []);
+
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(private dataService: DataService) { }
 
@@ -25,6 +28,16 @@ export class ArchivedIncidentsComponent implements OnInit {
         this.dataSource = new MatTableDataSource<Incident>(this.incidents);
         // console.log(this.incidents)
       });
+  }
+
+  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    console.log(type + " " + event.value);
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
   }
 
 }

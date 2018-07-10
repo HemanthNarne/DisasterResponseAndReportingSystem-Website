@@ -4,7 +4,14 @@
 -->
 
 <div class="example-container mat-elevation-z8">
-  
+  <div class="example-header">
+    <mat-form-field>
+      <!-- <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter"> -->
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi="true" #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
   <mat-table #table [dataSource]="dataSource">
 
     <!--- Note that these columns can be defined in any order.
@@ -36,11 +43,11 @@
 
     <!-- County Column -->
     <ng-container matColumnDef="description">
-      <mat-header-cell *matHeaderCellDef class="table-header"> County </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef class="table-header"> Description </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.description }} </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;" (click) = "rowClicked(row)"></mat-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClicked(row)"></mat-row>
   </mat-table>
 </div>
