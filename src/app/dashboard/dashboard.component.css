@@ -1,14 +1,11 @@
+/* Assigned to Mouli and Kishan*/
+
+/* cards */
 .example-card {
     max-width: 235px;
-  }
+}
   
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-  
-  .example-button-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
+/* for buttons - Create incident and Archived Incidents */
+.buttons {
+    font-size: 1em;
+}

@@ -1,41 +1,55 @@
 <!-- 
   Assigned to Chandra mouli
  -->
- <!-- @Author Chandra Mouli Kantipudi -->
- <br>
-<h1>Dashboard</h1>
-<button routerLink="/createIncident" mat-raised-button>Create Incident</button>
-<button routerLink="/archivedIncidents" mat-raised-button>Archived Incidents</button>
-<br>
-<br>
-<mat-card class="example-card">
-  <a routerLink="/dashboard">
-    <img mat-card-image src="assets/images/incidents/img.1.jpg" alt="Earthquake">
-  </a>
-  <mat-card-content>
-    <h2>Earthquake</h2>
-    <p>
-      Magnitude 5.7 earthquake 1238 miles from Salvador, Falkland Islands (Islas Malvinas) · Jun 25, 8:48 PM
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Edit</button>
-    <button mat-button>Archive</button>
-  </mat-card-actions>
-</mat-card>
-<br>
-<mat-card class="example-card">
-  <a routerLink="/dashboard">
-    <img mat-card-image src="assets/images/incidents/img.2.jpg" alt="Earthquake">
-  </a>
-  <mat-card-content>
-    <h2>Wildfires</h2>
-    <p>
-      Sardinas Canyon Fire: Sardinas Canyon Fire, June 28,2018 Acres: Approximately 1672
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Edit</button>
-    <button mat-button>Archive</button>
-  </mat-card-actions>
-</mat-card>
+<!-- @Author Chandra Mouli Kantipudi -->
+<div class="container">
+  <h1>Dashboard</h1>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <button routerLink="/createIncident" mat-raised-button color="primary" class="buttons">Create Incident</button>
+    </div>
+
+    <div class="col text-right">
+      <button routerLink="/archivedIncidents" mat-raised-button color="primary" class="buttons">Archived Incidents</button>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-3 text-center">
+      <mat-card class="example-card">
+        <a routerLink="/dashboard">
+          <img mat-card-image src="assets/images/incidents/img.1.jpg" alt="Earthquake">
+        </a>
+        <mat-card-content>
+          <h2>Earthquake</h2>
+          <p>
+            Magnitude 5.7 earthquake 1238 miles from Salvador, Falkland Islands (Islas Malvinas) · Jun 25, 8:48 PM
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Edit</button>
+          <button mat-raised-button color="warn">Archive</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-3 text-center">
+      <mat-card class="example-card">
+        <a routerLink="/dashboard">
+          <img mat-card-image src="assets/images/incidents/img.2.jpg" alt="Earthquake">
+        </a>
+        <mat-card-content>
+          <h2>Wildfires</h2>
+          <p>
+            Sardinas Canyon Fire: Sardinas Canyon Fire, June 28,2018 Acres: Approximately 1672
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Edit</button>
+          <button mat-raised-button color="warn">Archive</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
