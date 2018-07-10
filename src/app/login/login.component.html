@@ -15,7 +15,7 @@
         Email error block 
         by kishan
       -->
-      <div *ngIf="(email.invalid && ( email.touched || email.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+      <div *ngIf="(email.invalid && ( email.touched || email.dirty)) || isSubmitted" class="text-danger">
         <div *ngIf="email.errors?.required">
           Please enter the email id
         </div>
@@ -32,18 +32,17 @@
         <b>Password</b>
       </label>
       <input type="password" class="form-control" [ngModel]="applicant.password" name="password" #password="ngModel" id="inputpassword"
-        placeholder="Password" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+        placeholder="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
       <!-- password error block -->
-      <div *ngIf="(password.invalid && ( password.touched || password.dirty)) || isSubmitted" class="col-sm-6 text-danger">
+      <div *ngIf="(password.invalid && ( password.touched || password.dirty)) || isSubmitted" class="text-danger">
         <div *ngIf="password.errors?.required">
           Please enter the password
         </div>
-        <div *ngIf="password.errors?.pattern && password.dirty">
-          Password must have UpperCase, LowerCase, Number/SpecialChar and mininmum 6 characters.
-        </div>
+        <!-- <div *ngIf="password.errors?.pattern && password.dirty">
+          Password must have UpperCase, LowerCase, Number/SpecialChar and mininmum 8 characters.
+        </div> -->
       </div>
       </div>
-
       <button class="btn btn-primary"> Login </button>
   </form>
   </div>
