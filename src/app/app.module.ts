@@ -89,7 +89,7 @@ import { ArchivedIncidentsComponent } from './archived-incidents/archived-incide
     MatToolbarModule,
     MatTooltipModule,
   ],
-  declarations: [ArchivedIncidentsComponent]
+  declarations: []
 })
 export class DemoMaterialModule {}
 
@@ -102,7 +102,8 @@ export class DemoMaterialModule {}
     ReviewApplicationComponent,
     TeamsComponent,
     CreateTeamsComponent,
-    Team1DetailsComponent
+    Team1DetailsComponent,
+    ArchivedIncidentsComponent
   ],
   imports: [
     BrowserModule,
