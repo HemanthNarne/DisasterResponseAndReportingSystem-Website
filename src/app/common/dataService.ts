@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Applicant } from './applicant';
+
 
 @Injectable({
     providedIn: 'root',
@@ -12,9 +12,9 @@ export class DataService {
         return this.http.get("https://drrs.herokuapp.com/getApplicantsList");
     }
 
-    saveApplicant(data: Applicant) {
+    getIncidentsList() {
         //   http call
-        return this.http.post("https://drrs.herokuapp.com/#########", data);
+        return this.http.get("https://drrs.herokuapp.com/getIncidentsList");
     }
 }
 

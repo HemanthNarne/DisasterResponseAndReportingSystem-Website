@@ -1,9 +1,11 @@
+// Assigned to Kishan
+
 export class Incident {
 
 incidentID: string;
   incidentName:  string;
   location: string;
-  date: string;
+  date: Date;
   time: string;
   description: string;
 

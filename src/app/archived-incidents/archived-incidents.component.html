@@ -4,55 +4,43 @@
 -->
 
 <div class="example-container mat-elevation-z8">
-  <div class="example-header">
-    <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-    </mat-form-field>
-  </div>
-  <mat-table #table [dataSource]="dataSource" matSort>
+  
+  <mat-table #table [dataSource]="dataSource">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
     <!-- First Name Column -->
-    <ng-container matColumnDef="firstName">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> First Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.firstName }} </mat-cell>
+    <ng-container matColumnDef="incidentName">
+      <mat-header-cell *matHeaderCellDef class="table-header"> Incident Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.incidentName }} </mat-cell>
     </ng-container>
 
     <!-- Last Name Column -->
-    <ng-container matColumnDef="lastName">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> Last Name </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.lastName }} </mat-cell>
+    <ng-container matColumnDef="location">
+      <mat-header-cell *matHeaderCellDef class="table-header"> Location </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.location }} </mat-cell>
     </ng-container>
 
     <!-- Email Column -->
-    <ng-container matColumnDef="email">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> Email </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef class="table-header"> Date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.date | date }} </mat-cell>
     </ng-container>
 
     <!-- Date of Birth Column -->
-    <ng-container matColumnDef="dob">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> Date of Birth </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.dob}} </mat-cell>
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef class="table-header"> Time </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.time }} </mat-cell>
     </ng-container>
 
     <!-- County Column -->
-    <ng-container matColumnDef="county">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> County </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.county}} </mat-cell>
-    </ng-container>
-
-    <!-- Skills Column -->
-    <ng-container matColumnDef="skills">
-      <mat-header-cell *matHeaderCellDef mat-sort-header class="table-header"> skills </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.skills}} </mat-cell>
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef class="table-header"> County </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.description }} </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;" (click) = "rowClicked(row)"></mat-row>
   </mat-table>
-  <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
-  </mat-paginator>
 </div>
