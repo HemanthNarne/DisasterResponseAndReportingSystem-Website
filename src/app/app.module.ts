@@ -51,6 +51,7 @@ import {
 } from '@angular/material';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ArchivedIncidentsComponent } from './archived-incidents/archived-incidents.component';
 
 @NgModule({
   exports: [
@@ -87,7 +88,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  ]
+  ],
+  declarations: [ArchivedIncidentsComponent]
 })
 export class DemoMaterialModule {}
 

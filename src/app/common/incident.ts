@@ -1,0 +1,6 @@
+incidentID: String,
+  incidentName:  String,
+  location: String,
+  date: { type: Date, default: Date.now },
+  time: String,
+  description: String,
