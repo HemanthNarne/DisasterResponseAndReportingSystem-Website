@@ -2,15 +2,19 @@
   Assigned to Chandra mouli
  -->
 <!-- @Author Chandra Mouli Kantipudi -->
+
 <div class="container">
+  <!-- Header for the dashboard page -->
   <h1>Dashboard</h1>
   <hr>
   <div class="row">
     <div class="col">
+      <!-- Create incident button provided to route to create incident page -->
       <button routerLink="/createIncident" mat-raised-button color="primary" class="buttons">Create Incident</button>
     </div>
 
     <div class="col text-right">
+      <!-- Archived Incidents button provided to route to Archived Incidents page -->
       <button routerLink="/archivedIncidents" mat-raised-button color="primary" class="buttons">Archived Incidents</button>
     </div>
   </div>
@@ -18,35 +22,48 @@
   <br>
   <div class="row">
     <div class="col-3 text-center">
+      <!-- The incident modules are shown using cards. Card has image of incident,
+      brief description and two buttons edit and archive -->
       <mat-card class="example-card">
         <a routerLink="/dashboard">
+          <!-- Image of incident -->
           <img mat-card-image src="assets/images/incidents/img.1.jpg" alt="Earthquake">
         </a>
         <mat-card-content>
+          <!-- Name of incident -->
           <h2>Earthquake</h2>
           <p>
+            <!-- Brief description of incident -->
             Magnitude 5.7 earthquake 1238 miles from Salvador, Falkland Islands (Islas Malvinas) · Jun 25, 8:48 PM
           </p>
         </mat-card-content>
         <mat-card-actions>
+          <!-- Edit button is provided to edit features of the incident module-->
           <button mat-raised-button color="primary">Edit</button>
+          <!-- Archive button is provided to archive the incident module -->
           <button mat-raised-button color="warn">Archive</button>
         </mat-card-actions>
       </mat-card>
     </div>
     <div class="col-3 text-center">
+      <!-- The incident modules are shown using cards. Card has image of incident,
+      brief description and two buttons edit and archive -->
       <mat-card class="example-card">
         <a routerLink="/dashboard">
+          <!-- Image of incident -->
           <img mat-card-image src="assets/images/incidents/img.2.jpg" alt="Earthquake">
         </a>
         <mat-card-content>
           <h2>Wildfires</h2>
           <p>
+            <!-- Brief description of incident -->
             Sardinas Canyon Fire: Sardinas Canyon Fire, June 28,2018 Acres: Approximately 1672
           </p>
         </mat-card-content>
         <mat-card-actions>
+          <!-- Edit button is provided to edit features of the incident module-->
           <button mat-raised-button color="primary">Edit</button>
+          <!-- Archive button is provided to archive the incident module -->
           <button mat-raised-button color="warn">Archive</button>
         </mat-card-actions>
       </mat-card>
