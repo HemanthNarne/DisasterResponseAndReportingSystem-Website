@@ -1,23 +1,32 @@
-
+<!-- 
+  Assigned to Chandra mouli
+ -->
+<!-- @Author Chandra Mouli Kantipudi -->
+<!-- Page not yet completed -->
  <div class="container">
+   <!-- Header for the page -->
     <h1>Create Team</h1>
     <hr>
     
+    <!-- Form to input the team details -->
     <form novalidate (ngSubmit)="onCreate(createTeam)" #createTeam="ngForm">
     
       <div class="form-group">
         <label for="team">
           <b>Team Name</b>
         </label>
+        <!-- Input for team name -->
         <input type="text" class="form-control" [ngModel]="team.teamname" name="team name" teamname #teamname="ngModel" id="inputteamname"
           placeholder="Enter Team Name" required>
       
+          <!-- Validation for the team name -->
         <div *ngIf="(incident.invalid && ( incident.touched || incident.dirty)) || isSubmitted" class="col-sm-6 text-danger">
           <div *ngIf="incident.errors?.required">
             Please enter the incident
           </div>
         </div><br>
     
+        <!-- TeamID should autogenerate -->
         <label for="teamid">
           <b>Team ID</b>
         </label>
@@ -27,7 +36,7 @@
       </div>
 
       
-    
+    <!-- Button provided to create team -->
       <button class="btn primary"> Create Team</button>
     </form>
     </div>

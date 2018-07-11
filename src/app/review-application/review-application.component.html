@@ -41,12 +41,14 @@
 </table> -->
 
 <div class="container">
+  <!-- Header for Review Applications -->
 <h1>Review Applications</h1>
 <hr>
 
 <div class="example-container mat-elevation-z8">
   <div class="example-header">
     <mat-form-field>
+      <!-- Filter provided to filter the table data -->
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
     </mat-form-field>
   </div>

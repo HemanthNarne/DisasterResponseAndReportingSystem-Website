@@ -2,19 +2,23 @@
   Assigned to Hemanth
  -->
  <div class="loginContainer">
+   <!-- Header for login page -->
   <h1>Login </h1>
+  <!-- Form provided to input login details -->
   <form novalidate (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
 
     <div class="form-group">
       <label for="email">
         <b>Email</b>
       </label>
+      <!-- Input for emailID -->
       <input type="text" class="form-control" [ngModel]="applicant.email" name="email" email #email="ngModel" id="inputEmail" placeholder="Email"
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
       <!-- 
         Email error block 
         by kishan
       -->
+      <!-- Validation for emailID -->
       <div *ngIf="(email.invalid && ( email.touched || email.dirty)) || isSubmitted" class="text-danger">
         <div *ngIf="email.errors?.required">
           Please enter the email id
@@ -31,9 +35,11 @@
       <label for="password">
         <b>Password</b>
       </label>
+      <!-- Input for password -->
       <input type="password" class="form-control" [ngModel]="applicant.password" name="password" #password="ngModel" id="inputpassword"
         placeholder="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
       <!-- password error block -->
+      <!-- Validation for password -->
       <div *ngIf="(password.invalid && ( password.touched || password.dirty)) || isSubmitted" class="text-danger">
         <div *ngIf="password.errors?.required">
           Please enter the password
@@ -43,6 +49,7 @@
         </div> -->
       </div>
       </div>
+      <!-- Button provided to submit login details -->
      <button class="btn primary"> Login </button>
   </form>
   </div>
