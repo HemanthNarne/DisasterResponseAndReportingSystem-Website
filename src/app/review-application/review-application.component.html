@@ -40,9 +40,9 @@
   </tr>
 </table> -->
 
-<br>
+<div class="container">
 <h1>Review Applications</h1>
-<br>
+<hr>
 
 <div class="example-container mat-elevation-z8">
   <div class="example-header">
@@ -94,6 +94,7 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns;" (click) = "rowClicked(row)"></mat-row>
   </mat-table>
-  <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
-  </mat-paginator>
+  <!-- <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+  </mat-paginator> -->
+</div>
 </div>
