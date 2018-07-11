@@ -3,6 +3,7 @@
   Assigned to Kishan 
 -->
 <div class="container">
+   <!-- Header for the Archived Incidents page -->
   <h1>Archived Incidents</h1>
   <hr>
 
@@ -13,6 +14,7 @@
         <div class="example-header">
           <mat-form-field>
             <!-- <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter"> -->
+            <!-- Picker is added to select the date from calendar -->
             <input matInput [matDatepicker]="picker" placeholder="Choose a start date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker touchUi="true" #picker></mat-datepicker>           
@@ -20,41 +22,43 @@
         </div>
       </div>
       <div class="col">
+        <!-- Table contains details of the archived incidents -->
         <mat-table #table [dataSource]="dataSource">
 
           <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-          <!-- First Name Column -->
+          <!-- Incident Name Column -->
           <ng-container matColumnDef="incidentName">
             <mat-header-cell *matHeaderCellDef class="table-header"> Incident Name </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.incidentName }} </mat-cell>
           </ng-container>
 
-          <!-- Last Name Column -->
+          <!-- Location Name Column -->
           <ng-container matColumnDef="location">
             <mat-header-cell *matHeaderCellDef class="table-header"> Location </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.location }} </mat-cell>
           </ng-container>
 
-          <!-- Email Column -->
+          <!-- Date Column -->
           <ng-container matColumnDef="date">
             <mat-header-cell *matHeaderCellDef class="table-header"> Date </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.date | date }} </mat-cell>
           </ng-container>
 
-          <!-- Date of Birth Column -->
+          <!-- Time Column -->
           <ng-container matColumnDef="time">
             <mat-header-cell *matHeaderCellDef class="table-header"> Time </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.time }} </mat-cell>
           </ng-container>
 
-          <!-- County Column -->
+          <!-- Description Column -->
           <ng-container matColumnDef="description">
             <mat-header-cell *matHeaderCellDef class="table-header"> Description </mat-header-cell>
             <mat-cell *matCellDef="let element"> {{element.description }} </mat-cell>
           </ng-container>
 
+          <!-- When clicked on any row a popup is displayed showing the details of incident -->
           <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
           <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowClicked(row)"></mat-row>
         </mat-table>
@@ -64,6 +68,7 @@
 <hr>
   <div class="row">
     <div class="col text-center">
+      <!-- Button provided to download the archived incidents to the excel sheet -->
     <button mat-raised-button color="primary">Download</button>
   </div>
   </div>

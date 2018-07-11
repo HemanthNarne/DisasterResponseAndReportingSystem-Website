@@ -2,25 +2,28 @@
   Assigned to Hemanth
  -->
  <div class="container">
+   <!-- Header for the Create Incident page -->
     <h1>Create Incident</h1>
     <hr>
   </div>
  
  <div class="createContainer">
 
-
+<!-- Form provided to input details for incident details -->
 <form novalidate (ngSubmit)="onCreate(createInc)" #createInc="ngForm">
 
   <div class="form-group">
     <label for="incident">
       <b>Incident Name</b>
     </label>
+    <!-- Input for incident name -->
     <input type="text" class="form-control" [ngModel]="applicant.incident" name="incident" incident #incident="ngModel" id="inputincident"
       placeholder="Enter incident" required>
     <!-- 
       incident error block 
       by Kishan
     -->
+    <!-- Input validation for incident name-->
     <div *ngIf="(incident.invalid && ( incident.touched || incident.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="incident.errors?.required">
         Please enter the incident
@@ -30,19 +33,21 @@
     <label for="location">
       <b>Location</b>
     </label>
+    <!-- Input field for location name -->
     <input type="text" class="form-control" [ngModel]="applicant.location" name="location" location #location="ngModel" id="inputlocation"
       placeholder="Enter location" required>
     <!-- 
       location error block 
       by Kishan
     -->
+    <!-- Input validation for location -->
     <div *ngIf="(location.invalid && ( location.touched || location.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="location.errors?.required">
         Please enter the location
       </div>
     </div>
 
-    <!-- Select certTeam block -->
+    <!-- Selection for certTeam block -->
     <label for="certTeam">
       <b>CERT Team</b>
     </label>
@@ -64,13 +69,14 @@
       date error block 
       by Kishan
     -->
+    <!-- Validtion for date block -->
     <div *ngIf="(date.invalid && ( date.touched || date.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="date.errors?.required">
         Please enter the date
       </div>
     </div>
 
-    <!-- Select date block -->
+    <!-- Select time block -->
     <label for="time">
       <b>Time</b>
     </label>
@@ -80,6 +86,7 @@
       time error block 
       by Kishan
     -->
+    <!-- Validation for time block -->
     <div *ngIf="(time.invalid && ( time.touched || time.dirty)) || isSubmitted" class="col-sm-6 text-danger">
       <div *ngIf="time.errors?.required">
         Please enter the time
@@ -87,6 +94,7 @@
     </div>
   </div>
 
+  <!-- Button provided to Create Incident -->
   <button class="btn primary"> Create </button>
   
 </form>
