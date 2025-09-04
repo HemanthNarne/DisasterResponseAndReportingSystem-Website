@@ -66,28 +66,13 @@ Link: https://github.com/HemanthNarne/DisasterResponseAndReportingSystem-Website
 
 # Team Contact Info
 
-Chandra Mouli Kantipudi	
-6605280608	
-chandramouli.kantipudi@gmail.com	
-S530469@nwmissouri.edu
+Chandra Mouli Kantipudi
 
-Hemanth Narne	
-8486675654	
-narne5454@gmail.com	
-S530945@nwmissouri.edu
+Hemanth Narne
 
-Kishan Kalburgi Srinivas	
-6605280396	
-kishan.ks91411@gmail.com	
-S530468@nwmissouri.edu
+Kishan Kalburgi
 
-Sreevani Anoohya Tadiboina	
-5717336661	
-anoohya.sree@gmail.com	
-S530488@nwmissouri.edu
+Sreevani Anoohya Tadiboina
 
-Vineeth Agarwal	
-6605413180	
-vineeth.agarwal06@gmail.com	
-S530671@nwmissouri.edu
+Vineeth Agarwal
 
